@@ -11,12 +11,14 @@ const style = (block: boolean) => ({
 
 //Info dinamic Inline styles, inyecto block props like parameter on style const
 interface IButtonProps {
-  block?: boolean;
+  blocked?: boolean;
 }
 
 export default class Button extends React.Component<IButtonProps> {
   public render() {
-    const { block = false } = this.props;
-    return <button {...this.props} style={style(block)}></button>;
+    const { blocked } = this.props;
+    return (
+      <button {...this.props} style={style(blocked ? blocked : false)}></button>
+    );
   }
 }
