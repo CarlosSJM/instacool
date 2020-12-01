@@ -10,7 +10,7 @@ import Title from "../../components/Title";
 export default class Login extends React.Component {
   public render() {
     return (
-      <Container>
+      <Container center={true}>
         <Card>
           <Title>Log In</Title>
           <Input placeholder="Email" label="email" />
